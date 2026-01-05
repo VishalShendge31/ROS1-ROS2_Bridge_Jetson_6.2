@@ -1,7 +1,3 @@
-Here is a **clean, proper GitHub README.md** version of your content, structured, readable, and copy-paste ready.
-
----
-
 # ROS1–ROS2 Bridge on NVIDIA Jetson (Kernel 6.2)
 
 This repository documents how to set up **ROS1 Noetic** and the **ROS1–ROS2 bridge (`ros1_bridge`)** using **Docker** on an NVIDIA Jetson platform.
