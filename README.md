@@ -166,6 +166,14 @@ docker run --rm -it \
            export ROS_MASTER_URI=http://10.81.162.71:11311 && \
            ros2 run ros1_bridge dynamic_bridge --bridge-all-topics"
 ```
+If you got any eeror regarding control-msgs:
+
+docker run --rm -it   --network=host   -e RMW_IMPLEMENTATION=rmw_cyclonedds_cpp   -v $HOME:/home/user   dustynv/ros:humble-desktop-l4t-r36.4.0   bash -c "curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg && \
+           apt update && apt install -y ros-humble-control-msgs ros-humble-trajectory-msgs && \
+           source /opt/ros/humble/setup.bash && \
+           source /home/user/ros-humble-ros1-bridge/install/local_setup.bash && \
+           export ROS_MASTER_URI=http://10.81.162.71:11311 && \
+           ros2 run ros1_bridge dynamic_bridge --bridge-all-topics"
 
 > 🔧 **Note:**
 > Replace `10.81.162.71` with the IP address of the machine running `roscore`.
